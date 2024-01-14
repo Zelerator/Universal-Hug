@@ -1,3 +1,7 @@
+print("wait 5")
+
+wait(5)
+
 local ThunderScreen = Instance.new("ScreenGui")
 local ThunderToggleUI = Instance.new("TextButton")
 local ThunderCornerUI = Instance.new("UICorner")
@@ -3393,7 +3397,7 @@ elseif MyLevel == 2400 or MyLevel <= 2424 or SelectMonster == "Candy Pirate" the
         elseif MyLevel >= 2425 or SelectMonster == "Snow Demon" then
 
 
-            Mon = "Snow Demon [Lv. 2425]"
+            Mon = "Snow Demon"
             QuestName = "CandyQuest1"
 
             LevelQuest = 2
@@ -3826,7 +3830,7 @@ spawn(function()
  while wait() do
  if _G.Auto_Farm_Ectoplasm then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Ship Deckhand [Lv. 1250]") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Engineer [Lv. 1275]") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Steward [Lv. 1300]") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Officer [Lv. 1325]") then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Ship Deckhand") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Engineer [Lv. 1275]") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Steward [Lv. 1300]") or game:GetService("Workspace").Enemies:FindFirstChild("Ship Officer [Lv. 1325]") then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
   if string.find(v.Name, "Ship") then
   repeat wait()
@@ -3863,7 +3867,7 @@ spawn(function()
  game:GetService("RunService").Heartbeat:Connect(function()
   pcall(function()
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Bone and StartMagnetBoneMon and (v.Name == "Reborn Skeleton [Lv. 1975]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Posessed Mummy [Lv. 2050]") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
+   if _G.Auto_Farm_Bone and StartMagnetBoneMon and (v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy") and (v.HumanoidRootPart.Position - PosMonBone.Position).magnitude <= 350 then
    v.HumanoidRootPart.CFrame = PosMonBone
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
@@ -3881,9 +3885,9 @@ spawn(function()
  while wait() do
  if _G.Auto_Farm_Bone and World3 then
  pcall(function()
-  if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton [Lv. 1975]") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie [Lv. 2000]") or game:GetService("Workspace").Enemies:FindFirstChild("Domenic Soul [Lv. 2025]") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy [Lv. 2050]") then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Domenic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Reborn Skeleton [Lv. 1975]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Posessed Mummy [Lv. 2050]" then
+  if v.Name == "Reborn Skeleton" or v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
   if v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
@@ -4147,9 +4151,9 @@ spawn(function()
   repeat wait() topos(pos2) until (pos2.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3 or not _G.Auto_New_World
   wait(3)
   elseif game.Workspace.Map.Ice.Door.CanCollide == false and game.Workspace.Map.Ice.Door.Transparency == 1 then
-  if game:GetService("Workspace").Enemies:FindFirstChild("Ice Admiral [Lv. 700] [Boss]") then
+  if game:GetService("Workspace").Enemies:FindFirstChild("Ice Admiral") then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "Ice Admiral [Lv. 700] [Boss]" and v.Humanoid.Health > 0 then
+  if v.Name == "Ice Admiral" and v.Humanoid.Health > 0 then
   repeat wait()
   AutoHaki()
   EquipWeapon(_G.Select_Weapon)
@@ -4188,9 +4192,9 @@ spawn(function()
   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("QuestProgress","Begin")
   end
   wait(1.8)
-  if game:GetService("Workspace").Enemies:FindFirstChild("rip_indra [Lv. 1500] [Boss]") then
+  if game:GetService("Workspace").Enemies:FindFirstChild("rip_indra") then
   for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-  if v.Name == "rip_indra [Lv. 1500] [Boss]" then
+  if v.Name == "rip_indra" then
   OldCFrameThird = v.HumanoidRootPart.CFrame
   repeat wait()
   AutoHaki()
@@ -4207,7 +4211,7 @@ spawn(function()
   until _G.Auto_Third_World == false or v.Humanoid.Health <= 0 or not v.Parent
   end
   end
-  elseif not game:GetService("Workspace").Enemies:FindFirstChild("rip_indra [Lv. 1500] [Boss]") and (CFrame.new(-26880.93359375, 22.848554611206, 473.18951416016).Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1000 then
+  elseif not game:GetService("Workspace").Enemies:FindFirstChild("rip_indra") and (CFrame.new(-26880.93359375, 22.848554611206, 473.18951416016).Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1000 then
   topos(CFrame.new(-26880.93359375, 22.848554611206, 473.18951416016))
   end
   end
@@ -4450,7 +4454,7 @@ spawn(function()
   pcall(function()
    if _G.BringExtra then
    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-   if _G.Auto_Farm_Level and StartMagnet and v.Name ~= "Ice Admiral [Lv. 700] [Boss]" and v.Name ~= "Don Swan [Lv. 3000] [Boss]" and v.Name ~= "Saber Expert [Lv. 200] [Boss]" and v.Name ~= "Longma [Lv. 2000] [Boss]" and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
+   if _G.Auto_Farm_Level and StartMagnet and v.Name ~= "Ice Admiral" and v.Name ~= "Don Swan" and v.Name ~= "Saber Expert" and v.Name ~= "Longma" and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 350 then
    v.HumanoidRootPart.CFrame = PosMon
    v.HumanoidRootPart.CanCollide = false
    v.HumanoidRootPart.Size = Vector3.new(60,60,60)
