@@ -380,3 +380,7 @@ warn("FPS Booster Loaded!")
 --[[game.DescendantAdded:Connect(function(value)
     CheckIfBad(value)
 end)]]
+
+wait(10)
+
+game:GetService("RunService"):Set3dRenderingEnabled(false)
